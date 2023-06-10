@@ -263,7 +263,7 @@
             </svg></li>
         </ul>
         <p style="margin-left: 0px;"></p>
-        <p class="mb-0"><img src="./assets/img/Group%203.png?h=439548e6fe6149ee1ccd8c9e51bcda36" width="108"
+        <p class="mb-0"><img src="./Views/assets/img/Group%203.png?h=439548e6fe6149ee1ccd8c9e51bcda36" width="108"
             height="26">Copyright © 2023&nbsp;</p>
       </div>
     </footer><!-- End: Footer Basic -->
