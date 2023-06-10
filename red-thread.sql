@@ -188,7 +188,7 @@ ALTER TABLE `requests`
 -- Contraintes pour la table `service`
 --
 ALTER TABLE `service`
-  ADD CONSTRAINT `service_ibfk_1` FOREIGN KEY (`Id_department`) REFERENCES `department` (`Id_department`);
+  ADD CONSTRAINT `service_ibfk_1` FOREIGN KEY (`Id_department`) REFERENCES `department` (`Id_department`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

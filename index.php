@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Untitled</title>
-  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css?h=3f30c2c47d7d23c7a994db0c862d45a5">
+  <link rel="stylesheet" href="./Views/assets/bootstrap/css/bootstrap.min.css?h=3f30c2c47d7d23c7a994db0c862d45a5">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="./assets/css/styles.min.css?h=10507ef1e85d8c161df6cfe01e382174">
+  <link rel="stylesheet" href="./Views/assets/css/styles.min.css?h=10507ef1e85d8c161df6cfe01e382174">
 </head>
 
 <body><!-- Start: Navbar Centered Links -->
