@@ -108,7 +108,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6"><img data-aos="fade-right" data-aos-duration="1700" data-aos-delay="600" width="100%"
-            height="100%" src="./assets/img/Integration.webp?h=650261909087bd1bd0f8ae5279ead01e"></div>
+            height="100%" src="./Views/assets/img/Integration.webp?h=650261909087bd1bd0f8ae5279ead01e"></div>
         <div class="col-md-6">
           <h6>About us</h6>
           <h1>Who we are ?</h1>
@@ -158,7 +158,7 @@
         <div class="col-md-4"><!-- Start: card -->
           <div data-bss-hover-animate="pulse" id="cardEntrada-1" class="p-4 text-center shadow-lg m-5 rounded-5"
             style="background: #DD12A8;width: 280px;margin-bottom: 96px;padding-bottom: 0px;"><img class="pt-2 w-50"
-              src="./assets/img/3d-illustration-of-web-development-png%20(1).webp?h=dcff81072c0a0e59233b1f31b3c10943">
+              src="./Views/assets/img/3d-illustration-of-web-development-png%20(1).webp?h=dcff81072c0a0e59233b1f31b3c10943">
             <h4 class="text-dark text-center pt-2">Web Development&nbsp;</h4>
             <hr class="text-white"><!-- Start: Hover Button 1 -->
             <div><a class="btn btn-sm animated-button victoria-one" href="#">read more</a></div>
