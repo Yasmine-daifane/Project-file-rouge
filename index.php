@@ -16,7 +16,7 @@
 <body><!-- Start: Navbar Centered Links -->
   <nav class="navbar navbar-light navbar-expand-md py-3 fixed-top bg-body">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span><img
-            src="./assets/img/Group%203.png?h=439548e6fe6149ee1ccd8c9e51bcda36" width="171"
+            src="./Views/assets/img/Group%203.png?h=439548e6fe6149ee1ccd8c9e51bcda36" width="171"
             height="48"></span></a><button data-bs-toggle="collapse" class="navbar-toggler"
         data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span
           class="navbar-toggler-icon"></span></button>
@@ -44,7 +44,7 @@
             up</button><!-- End: Clean Button (Scale Hover Effect) -->
         </div>
         <div class="col"><img data-aos="fade-left" data-aos-duration="1700"
-            src="./assets/img/77397343875-removebg-preview%202.png?h=0c2374f66123a5f90e6674a32dbc29ad" width="516"
+            src="./Views/assets/img/77397343875-removebg-preview%202.png?h=0c2374f66123a5f90e6674a32dbc29ad" width="516"
             height="380"></div>
       </div>
     </div><!-- End: 1 Row 2 Columns --><!-- Start: Features Cards -->
@@ -148,7 +148,7 @@
         <div class="col-md-4"><!-- Start: card -->
           <div data-bss-hover-animate="pulse" id="cardEntrada-2" class="p-4 text-center shadow-lg m-5 rounded-5"
             style="background: #53BCC7;width: 280px;"><img class="pt-2 w-50"
-              src="./assets/img/3d-illustration-of-web-development-png.webp?h=6a9a601aef263a9abce590410b5c440c">
+              src="./Views/assets/img/3d-illustration-of-web-development-png.webp?h=6a9a601aef263a9abce590410b5c440c">
             <h3 class="text-dark text-center pt-2">IT</h3>
             <hr class="text-white"><!-- Start: Hover Button 1 -->
             <div><a class="btn btn-sm animated-button victoria-one" href="#">read more</a></div>
@@ -168,7 +168,7 @@
         <div class="col-md-4"><!-- Start: card -->
           <div data-bss-hover-animate="pulse" id="cardEntrada-3" class="p-4 text-center shadow-lg m-5 rounded-5"
             style="background: #ECD492;width: 280px;"><img class="pt-2 w-50"
-              src="./assets/img/3d-illustration-of-web-development-png%20(2).webp?h=6822a6651f2d235877f19549d68d5654">
+              src="./Views/assets/img/3d-illustration-of-web-development-png%20(2).webp?h=6822a6651f2d235877f19549d68d5654">
             <h3 class="text-dark text-center pt-2">Desing</h3>
             <hr class="text-white"><!-- Start: Hover Button 1 -->
             <div style="margin-bottom: 0px;"><a class="btn btn-sm animated-button victoria-one" href="#">read more</a>
@@ -189,7 +189,7 @@
             <p class="text-center" data-aos="slide-right">Highly impressed with InnovIT's service. They created a
               beautiful and user-friendly website!</p>
             <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"
-                src="./assets/img/avatars/avatar2.jpeg?h=5d142be9441885f0935b84cf739d4112">
+                src="./Views/assets/img/avatars/avatar2.jpeg?h=5d142be9441885f0935b84cf739d4112">
               <div>
                 <p class="fw-bold text-primary mb-0">John Smith</p>
                 <p class="text-muted mb-0">Erat netus</p>
@@ -205,7 +205,7 @@
             <p class="text-center" data-aos="zoom-in-right">Choosing InnovIT was a great decision. Their transparent
               pricing made the entire process smooth and trustworthy.</p>
             <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"
-                src="./assets/img/avatars/avatar3.jpeg?h=c5166867f10a4e454b5b2ae8d63268b3">
+                src="./Views/assets/img/avatars/avatar3.jpeg?h=c5166867f10a4e454b5b2ae8d63268b3">
               <div>
                 <p class="fw-bold text-primary mb-0">John Smith</p>
                 <p class="text-muted mb-0">Erat netus</p>
@@ -221,7 +221,7 @@
             <p class="text-center" data-aos="slide-left">InnovIT exceeded my expectations. Their creativity and
               expertise were outstanding!</p>
             <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"
-                src="./assets/img/avatars/avatar1.jpeg?h=0ecc82101fb9a10ca459432faa8c0656">
+                src="./Views/assets/img/avatars/avatar1.jpeg?h=0ecc82101fb9a10ca459432faa8c0656">
               <div>
                 <p class="fw-bold text-primary mb-0">John Smith</p>
                 <p class="text-muted mb-0">Erat netus</p>
@@ -270,7 +270,7 @@
   </section><!-- End: Hero Features -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="./assets/js/script.min.js?h=e2e934151fcc02da274eaadcd4e2503d"></script>
+  <script src="./Views/assets/js/script.min.js?h=e2e934151fcc02da274eaadcd4e2503d"></script>
 </body>
 
 </html>
