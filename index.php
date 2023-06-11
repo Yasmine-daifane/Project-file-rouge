@@ -11,30 +11,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include "/Views/Layout/head.php";
+include './Views/Layout/head.php';
+?>
+<?php
+include './Views/Assets/css/index.css';
 ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        include "/Views/Layout/preloader.php";
+        include './Views/Layout/preloader.php';
         ?>
         <!-- Navbar -->
         <?php
-        include  "/Views/Layout/navbar.php";
+        include  './Views/Layout/navbar.php';
         ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <?php
-        include  "/Views/Layout/sidebar.php" ;
+        include  './Views/Layout/sidebar.php' ;
         ?>
         <!-- /.sidebar -->
 
         <!-- Content Wrapper. Contains page content -->
       <main>
-
 
 
 
@@ -51,7 +53,7 @@ include "/Views/Layout/head.php";
     <!-- ./wrapper -->
     <!-- links script -->
     <?php
-    include '/Views/Layout/Links.php';
+    include './Views/Layout/Links.php';
     ?>
 </body>
 
