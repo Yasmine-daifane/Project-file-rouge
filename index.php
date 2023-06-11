@@ -1,5 +1,5 @@
 <?php
-include "/Views/Layout/root.php";
+
 
 // 
 // Afficher la liste des projets 
@@ -11,24 +11,24 @@ include "/Views/Layout/root.php";
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include_once(__ROOT__ . "/Views/Layout/head.php");
+include "/Views/Layout/head.php";
 ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/preloader.php");
+        include "/Views/Layout/preloader.php";
         ?>
         <!-- Navbar -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/navbar.php");
+        include  "/Views/Layout/navbar.php";
         ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/sidebar.php");
+        include  "/Views/Layout/sidebar.php" ;
         ?>
         <!-- /.sidebar -->
 
@@ -51,7 +51,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
     <!-- ./wrapper -->
     <!-- links script -->
     <?php
-    include_once(__ROOT__ . '/Views/Layout/Links.php');
+    include '/Views/Layout/Links.php';
     ?>
 </body>
 
