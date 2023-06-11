@@ -1,5 +1,5 @@
 <?php
-include "../Layout/root.php";
+include "/Views/Layout/root.php";
 
 // 
 // Afficher la liste des projets 
@@ -33,7 +33,13 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
         <!-- /.sidebar -->
 
         <!-- Content Wrapper. Contains page content -->
-      <main></main>
+      <main>
+
+
+
+
+      
+      </main>
         <!-- /.content-wrapper -->
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
