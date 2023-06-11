@@ -1,5 +1,5 @@
 <?php
-// include "../Layout/root.php";
+include "../Layout/root.php";
 
 // 
 // Afficher la liste des projets 
@@ -22,13 +22,13 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
         ?>
         <!-- Navbar -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/navbare.php");
+        include_once(__ROOT__ . "/Views/Layout/navbar.php");
         ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/sidebare.php");
+        include_once(__ROOT__ . "/Views/Layout/sidebar.php");
         ?>
         <!-- /.sidebar -->
 
@@ -41,13 +41,11 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <?php
-    include_once(__ROOT__ . '/Views/Layout/footer.php');
-    ?>
+  
     <!-- ./wrapper -->
     <!-- links script -->
     <?php
-    include_once(__ROOT__ . '/Views/Layout/links.php');
+    include_once(__ROOT__ . '/Views/Layout/Links.php');
     ?>
 </body>
 
