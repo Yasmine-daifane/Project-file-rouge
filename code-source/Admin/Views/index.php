@@ -1,17 +1,12 @@
-<?php
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include './Views/Layout/head.php';
+include_once("/xampp/htdocs/Project-file-rouge/code-source/Admin/Views/Layout/root.php");
+include_once(__ROOT__ . "/Views/Layout/head.php")
 ?>
 <style>
     <?php
-    include './Views/Assets/css/index.css';
+    include_once(__ROOT__ . '/Views/Assets/css/index.css');
     ?>
 </style>
 
@@ -20,17 +15,17 @@ include './Views/Layout/head.php';
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        include './Views/Layout/preloader.php';
+        include_once(__ROOT__ . '/Views/Layout/preloader.php');
         ?>
         <!-- Navbar -->
         <?php
-        include  './Views/Layout/navbar.php';
+        include_once(__ROOT__ . '/Views/Layout/navbar.php');
         ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <?php
-        include  './Views/Layout/sidebar.php';
+        include_once(__ROOT__ . '/Views/Layout/sidebar.php');
         ?>
         <!-- /.sidebar -->
 
@@ -52,30 +47,40 @@ include './Views/Layout/head.php';
                 <!-- Default box -->
                 <div class="row w-100" style="gap: 20px;">
                     <div class="col-4 like-dislike-container">
-                        <a href="#">
+                        <a href="./Department/">
                             <div class="tool-box">
                                 <hr class="elment">
                             </div>
+                            <p><?= $DepartmentNumber ?></p>
                             <p class="text-content">Department</p>
                         </a>
                     </div>
                     <div class="col-4 like-dislike-container">
-                        <div class="tool-box">
-                            <hr class="elment">
-                        </div>
-                        <p class="text-content">Services</p>
+                        <a href="#">
+                            <div class="tool-box">
+                                <hr class="elment">
+                            </div>
+                            <p><?= $ServicesNumber ?></p>
+                            <p class="text-content">Services</p>
+                        </a>
                     </div>
                     <div class="col-4 like-dislike-container">
-                        <div class="tool-box">
-                            <hr class="elment">
-                        </div>
-                        <p class="text-content">Requests</p>
+                        <a href="#">
+                            <div class="tool-box">
+                                <hr class="elment">
+                            </div>
+                            <p><?= $RatesRequests ?></p>
+                            <p class="text-content">Requests</p>
+                        </a>
                     </div>
                     <div class="col-4 like-dislike-container">
-                        <div class="tool-box">
-                            <hr class="elment">
-                        </div>
-                        <p class="text-content">Costumers</p>
+                        <a href="#">
+                            <div class="tool-box">
+                                <hr class="elment">
+                            </div>
+                            <p><?= $CostumerNumber ?></p>
+                            <p class="text-content">Costumers</p>
+                        </a>
                     </div>
 
                 </div>
@@ -83,7 +88,6 @@ include './Views/Layout/head.php';
         </section>
     </div>
     <!-- /.content-wrapper -->
-
 
 
 
@@ -99,7 +103,7 @@ include './Views/Layout/head.php';
     <!-- ./wrapper -->
     <!-- links script -->
     <?php
-    include './Views/Layout/Links.php';
+    include_once(__ROOT__ . '/Views/Layout/Links.php');
     ?>
 </body>
 

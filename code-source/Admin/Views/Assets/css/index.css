@@ -12,12 +12,20 @@
   flex-direction: column;
   align-items: center;
   cursor: default;
-  color: var(--dark-grey);
+  /* color: var(--dark-grey); */
+  color: white;
   opacity: 0.9;
   margin: auto;
   padding: 1.5rem;
   font-weight: 600;
-  background: var(--lightest-grey);
+  /* background: var(--lightest-grey); */
+  background: linear-gradient(
+    109.71deg,
+    #0094db 0%,
+    #22119d 15.62%,
+    #5c05a1 43.77%,
+    #dd12a8 100%
+  );
   max-width: 30rem;
 
   box-shadow: var(--shadow);
@@ -50,7 +58,7 @@
   height: 0.8rem;
   color: transparent;
   font-size: 0;
-  background-color: #ff000080;
+  background-color: rgb(74, 218, 255);
   border: none;
   border-radius: var(--border-radius-main);
   -webkit-border-radius: var(--border-radius-main);
@@ -71,5 +79,5 @@
   all: unset;
 }
 .like-dislike-container a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
