@@ -15,7 +15,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        include_once(__ROOT__ . '/Views/Layout/preloader.php');
+        // include_once(__ROOT__ . '/Views/Layout/preloader.php');
         ?>
         <!-- Navbar -->
         <?php
@@ -45,11 +45,11 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
             </section>
             <div class="row p-3">
                 <div class="col-sm-12 col-md-6">
-                    <a class="btn btn-primary" href="Ajouter.php">Add Departement</a>
+                    <a class="btn btn-primary" href="Ajouter.php">Add service</a>
                 </div>
             </div>
             <div id="result" class="p-3">
-                <?php include_once(__ROOT__ . "/Views/Departement/index.data.php") ?>
+                <?php include_once(__ROOT__ . "/Views/Service/index.data.php") ?>
             </div>
         </div>
         <!-- /.content-wrapper -->

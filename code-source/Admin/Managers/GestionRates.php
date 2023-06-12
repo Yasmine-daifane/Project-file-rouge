@@ -1,10 +1,6 @@
-<?php 
-
-
-  
-class GestionRates {
-
-
+<?php
+class GestionRates
+{
     private $Connection = Null;
     private function getConnection()
     {
@@ -18,78 +14,36 @@ class GestionRates {
         }
         return $this->Connection;
     }
-    
-         public function  getRequestsNumber (){
-            $sql = "SELECT  count(*)  FROM `requests` " ;
-            $result = mysqli_query($this->getConnection(), $sql);
-            $row = mysqli_fetch_assoc($result);
-            return $row['count(*)'];
-         }
 
+    public function  getRequestsNumber()
+    {
+        $sql = "SELECT  count(*)  FROM `requests` ";
+        $result = mysqli_query($this->getConnection(), $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['count(*)'];
+    }
 
-         public function getDepartmentNumber(){
-            $sql = "SELECT count(*) FROM    `department`";
-            $result = mysqli_query($this->getConnection(), $sql);
-            $row = mysqli_fetch_assoc($result);
-            return $row['count(*)'];
-         }
-          
+    public function getDepartmentNumber()
+    {
+        $sql = "SELECT count(*) FROM    `department`";
+        $result = mysqli_query($this->getConnection(), $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['count(*)'];
+    }
 
+    public function getServicesNumber()
+    {
+        $sql = "SELECT count(*)  FROM `service`";
+        $result = mysqli_query($this->getConnection(), $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['count(*)'];
+    }
 
-        public function getServicesNumber() {
-            $sql= "SELECT count(*)  FROM `service`" ;
-            $result = mysqli_query($this->getConnection(), $sql);
-            $row = mysqli_fetch_assoc($result);
-            return $row['count(*)'];
-        }
-
-        public function getCostumerNumber() {
-            $sql= "SELECT count(*)  FROM `costumer`" ;
-            $result = mysqli_query($this->getConnection(), $sql);
-            $row = mysqli_fetch_assoc($result);
-            return $row['count(*)'];
-        }
-
-
-
-
-        
-        
-
-         }
-       
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+    public function getCostumerNumber()
+    {
+        $sql = "SELECT count(*)  FROM `costumer`";
+        $result = mysqli_query($this->getConnection(), $sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['count(*)'];
+    }
+}
