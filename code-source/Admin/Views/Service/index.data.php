@@ -61,7 +61,7 @@ if (empty($pages)) {
                             <i class="fas fa-pencil-alt"></i>
                             Edit
                         </a>
-                        <a class="btn btn-danger btn-sm" href="supprimer.php?Id_Service=<?= $result->GetID() ?>">
+                        <a class="btn btn-danger btn-sm" href="delete.php?Id_Service=<?= $result->GetID() ?>">
                             <i class="fas fa-trash"></i>
                             Delete
                         </a>
