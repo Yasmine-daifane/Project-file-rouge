@@ -62,7 +62,9 @@ if (empty($pages)) {
                             Edit
                         </a>
                         <a class="btn btn-danger btn-sm" href="delete.php?Id_Service=<?=$result->GetID() ?>&id=<?= $id ?>">
-
+                        <i class="fas fa-pencil-alt"></i>
+                            delete
+                        </a>
                     
                     </td>
                 

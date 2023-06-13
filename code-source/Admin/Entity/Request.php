@@ -1,4 +1,5 @@
 <?php 
+include "client.php";
 class Requests extends Clients 
 {
       private $demande ;
