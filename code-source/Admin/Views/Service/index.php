@@ -15,7 +15,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        // include_once(__ROOT__ . '/Views/Layout/preloader.php');
+        include_once(__ROOT__ . '/Views/Layout/preloader.php');
         ?>
         <!-- Navbar -->
         <?php
@@ -45,7 +45,12 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
             </section>
             <div class="row p-3">
                 <div class="col-sm-12 col-md-6">
-                    <a class="btn btn-primary" href="Ajouter.php">Add service</a>
+                    <a class="btn btn-primary" href="Ajouter.php?id=<?= $id ?>">Add service</a>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <input type="hidden" id="id" value="<?= $id ?>">
+                    <div id="search_project" class="dataTables_filter"><input type="search" id="search_task" class="form-control" placeholder="Project name" aria-controls="search_project">
+                    </div>
                 </div>
             </div>
             <div id="result" class="p-3">

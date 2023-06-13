@@ -39,7 +39,6 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                         <div class="col-sm-6">
                             Welcome admin
                         </div>
-
                     </div>
                 </div><!-- /.container-fluid -->
             </section>

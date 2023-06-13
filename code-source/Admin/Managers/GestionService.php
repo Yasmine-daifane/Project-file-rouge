@@ -1,7 +1,5 @@
 <?php
 require_once(__ROOT__ . '/Entity/Service.php');
-
-
 class GestionServices
 {
     private $Connection = Null;
@@ -19,14 +17,14 @@ class GestionServices
         return $this->Connection;
     }
 
-    public function Add($service)
+    public function Add($service, $id)
     {
-        $Id = $service->GetID();
-        $nom =$service->GetName();
+        $nom = $service->GetName();
         $description = $service->GetDescription();
-        $price = $service-> GetPrice();
+        $price = $service->GetPrice();
         // requête SQL
-        $sql = "INSERT INTO `service`(`name`, `description`,price, `Id_Service`) VALUES ('$nom','$description', '$price','$Id')";
+        // $sql = "INSERT INTO `service`(`name`, `description`,price, Id_department`) VALUES ('$nom','$description', '$price','$id')";
+        $sql = "INSERT INTO `service` (`name`, `description`, `price`, `Id_department`) VALUES ('$nom','$description','$price','$id')";
         mysqli_query($this->getConnection(), $sql);
     }
 
@@ -42,37 +40,29 @@ class GestionServices
 
     public function rechercherParNom($nom, $id)
     {
-        $result = array();
-        $clients = "SELECT * FROM services ";
-        $clients = mysqli_query($this->getConnection(), $clients);
-        $clients_data = mysqli_fetch_all($clients, MYSQLI_ASSOC);
         $Services_data = $this->searchServicesByName($nom, $id);
+        // echo "<pre>";
+        // var_dump($Services_data);
+        // echo "<>pre>";
         $Services = array();
-        foreach ( $Services_data as $Service_data) {
-            $Service = new Service();
-            $Service->SetID($Service_data['I Id_Service']);
-            $Service->Setnom($Service_data['nom']);
-            $Service->SetType($Service_data['description']);
+        foreach ($Services_data as $Service_data) {
+            $Service = new Services();
+            $Service->SetID($Service_data['Id_Service']);
+            $Service->SetName($Service_data['name']);
+            $Service->SetDescription($Service_data['description']);
             $Service->SetPrice($Service_data['price']);
-            array_push( $Services,   $Service);
+            array_push($Services,   $Service);
         }
-        foreach($clients_data as $client_data) {
-            $client = new Client();
-            $client->SetID($client_data['Id_client']);
-            $client->Setnom($client_data['nom']);
-            $client->Setemail($client_data['email']);
-            array_push( $Clients, $client);
-        }
-        $result = [$clients, $Service];
-        return $result;
+
+        return $Services;
     }
     private function searchServicesByName($nom, $id)
     {
-        $sql = "SELECT * FROM client WHERE nom LIKE ? AND `Id_client` = ?";
+        $sql = "SELECT * FROM service WHERE name LIKE ? AND `Id_department` = ? Order by Id_Service DESC";
         $stmt = $this->getConnection()->prepare($sql);
         $search_nom = "%$nom%";
-        $search_nom  = $id;
-        $stmt->bind_param("si",   $search_nom ,   $search_nom ); // Use "si" for a string and integer parameter
+        $search_id  = $id;
+        $stmt->bind_param("si", $search_nom, $search_id);
         $stmt->execute();
         $query = $stmt->get_result();
         return mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -81,29 +71,29 @@ class GestionServices
 
     public function RechercherParId($id)
     {
-        $sql = "SELECT * FROM services WHERE  Id_Service= '$id'";
+        $sql = "SELECT * FROM service WHERE Id_Service= '$id'";
         $result = mysqli_query($this->getConnection(), $sql);
         // Récupère une ligne de résultat sous forme de tableau associatif
         $Service_data = mysqli_fetch_assoc($result);
-        $service= new Services();
-        $service->SetID(  $Service_data[' Id_Service']);
-        $service->Setnom(  $Service_data['nom']);
-        $service->SetType(  $Service_data['description']);
-        $service->SetPrice(  $Service_data['price']);
+        $service = new Services();
+        $service->SetID($Service_data['Id_Service']);
+        $service->SetName($Service_data['name']);
+        $service->SetDescription($Service_data['description']);
+        $service->SetPrice($Service_data['price']);
         return   $service;
     }
 
-    public function Supprimer($id)
+    public function delete($id)
     {
-        $sql = "DELETE FROM services WHERE  Id_Service= '$id'";
+        $sql = "DELETE FROM service WHERE Id_Service= '$id'";
         mysqli_query($this->getConnection(), $sql);
     }
 
-    public function Modifier($id, $nom, $description,$price)
+    public function Edit($id, $nom, $description, $price)
     {
         // Requête SQL
-        $sql = "UPDATE services SET 
-        nom='$nom',description='$description',price='$price'
+        $sql = "UPDATE service SET 
+        name='$nom',description='$description',price='$price'
         WHERE  Id_Service= $id";
         //  
         mysqli_query($this->getConnection(), $sql);
@@ -114,5 +104,3 @@ class GestionServices
         }
     }
 }
-
-?>

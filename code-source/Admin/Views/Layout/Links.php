@@ -33,4 +33,4 @@
 <script src="/Project-file-rouge/code-source/Admin/Views/Assets/vendor/AdminLTE-3.2.0/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/Project-file-rouge/code-source/Admin/Views/Assets/vendor/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
-<!-- <script src="/Project-file-rouge/code-source/Admin/Views/Assets/js/Index.js"></script> -->
+<script src="/Project-file-rouge/code-source/Admin/Views/Assets/js/Index.js"></script>
