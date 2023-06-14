@@ -30,6 +30,13 @@ class GestionRates
         $row = mysqli_fetch_assoc($result);
         return $row['count(*)'];
     }
+    public function getDepartment()
+    {
+        $sql = "SELECT * FROM    `department`";
+        $result = mysqli_query($this->getConnection(), $sql);
+        $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $row;
+    }
 
     public function getServicesNumber()
     {

@@ -31,6 +31,9 @@ class GestionDepartments
     {
         $sql = "DELETE FROM department WHERE `Id_department`= '$id'";
         mysqli_query($this->getConnection(), $sql);
+        echo "<pre>";
+        var_dump(mysqli_error($this->getConnection()));
+        echo "</pre>";
     }
 
     public function Edit($id, $nom, $description)

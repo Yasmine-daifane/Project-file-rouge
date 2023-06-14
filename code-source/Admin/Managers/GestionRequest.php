@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__ . '/Entity/client.php');
+require_once(__ROOT__ . '/Entity/Request.php');
 class GestionRequests
 {
     private $Connection = Null;
@@ -17,38 +17,35 @@ class GestionRequests
         return $this->Connection;
     }
 
-
-
-
-    public function GetAALRequests()
-{
-    $sql = 'SELECT c.id, c.first_name, c.last_name, c.email, r.demande, r.date_demande
-            FROM costumer c
-            JOIN requests r ON c.id = r.Id_costumer	';
-         
-    $query = mysqli_query($this->getConnection(), $sql);
-    $clientsData = mysqli_fetch_all($query, MYSQLI_ASSOC);
-    $clients = array();
-    echo "<pre>";
-
-    var_dump($clients);
-    echo "</pre>";
-    // foreach ($clientsData as $clientData) {
-    //     $client = new Clients();
-    //     $client->SetId($clientData['id']);
-    //     $client->SetFirst_name($clientData['first_name']);
-    //     $client->SetLast_name($clientData['last_name']);
-    //     $client->SetEmail($clientData['email']);
-
-    //     $request = new Requests();
-    //     $request->SetDemande($clientData['demande']);
-    //     $request->SetDate_demande($clientData['date_demande']);
-
-    
-    //     array_push($clients, $client);
-    // }
-    // return $clients;
+    public function pages($items, $pagesNum, $itemsPerPage)
+    {
+        $pages = array();
+        for ($i = 0; $i < $pagesNum; $i++) {
+            array_push($pages, array_slice($items, $i * $itemsPerPage, ($i + 1) * $itemsPerPage));
+        }
+        return $pages;
+    }
+    public function GetAllRequests()
+    {
+        $sql = 'SELECT c.Id_costumer, c.first_name, c.last_name, c.email, r.demande, r.date_demande,r.status,r.Id_request, s.name as name_service
+            FROM requests r
+            JOIN costumer c ON c.Id_costumer = r.Id_costumer
+            JOIN service s ON s.Id_Service = r.Id_Service ORDER BY date_demande DESC';
+        $query = mysqli_query($this->getConnection(), $sql);
+        $RequestsData = mysqli_fetch_all($query, MYSQLI_ASSOC);
+        $Requests = array();
+        foreach ($RequestsData as $RequestData) {
+            $request = new Requests();
+            $request->SetFirst_name($RequestData['first_name']);
+            $request->SetLast_name($RequestData['last_name']);
+            $request->SetEmail($RequestData['email']);
+            $request->Setstatus($RequestData['status']);
+            $request->SetDemande($RequestData['demande']);
+            $request->SetDate_demande($RequestData['date_demande']);
+            $request->SetId($RequestData['Id_request']);
+            $request->SetName($RequestData['name_service']);
+            array_push($Requests, $request);
+        }
+        return $Requests;
+    }
 }
-
-}
-    ?>

@@ -2,6 +2,9 @@
 define('__ROOT__', dirname(dirname(dirname(__FILE__))));
 
 include_once(__ROOT__ . '/Managers/GestionService.php');
+require_once(__ROOT__ . '/Managers/GestionRates.php');
+$GestionRates = new GestionRates;
+$getDepartment = $GestionRates->getDepartment();
 // Trouver tous les employés depuis la base de données 
 $GestionServices = new GestionServices();
 if (isset($_GET['id'])) {

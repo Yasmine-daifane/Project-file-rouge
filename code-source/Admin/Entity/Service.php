@@ -1,22 +1,17 @@
 <?php
-include "Base.php";
-class   Services extends Base 
+// include "Base.php";
+include "client.php";
+
+class Services extends Clients
 {
     private  $price;
 
-
-   
-    public function GetPrice(){
-
-        return $this -> price ;
+    public function GetPrice()
+    {
+        return $this->price;
     }
-    public function SetPrice ($price){
-
-        $this -> price=$price ;
+    public function SetPrice($price)
+    {
+        $this->price = $price;
     }
 }
-
-
-
-
-?>

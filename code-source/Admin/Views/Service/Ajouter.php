@@ -67,16 +67,16 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPrice"> Price</label>
-                                        <input type="number" name="price" id="inputPrice" class="form-control">
+                                        <input type="text" name="price" id="inputPrice" class="form-control">
 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="index.php" class="btn btn-secondary">Cancel</a>
-                            <input type="submit" value="Create new Client" name="create" class="btn btn-success float-right">
-                        </div>
-                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a href="index.php" class="btn btn-secondary">Cancel</a>
+                                        <input type="submit" value="Create new Client" name="create" class="btn btn-success float-right">
+                                    </div>
+                                </div>
                 </form>
             </section>
         </div>

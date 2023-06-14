@@ -26,6 +26,27 @@ $(document).on("click", ".service-page", function (e) {
   });
 });
 
+$(document).on("click", ".page-link", function (e) {
+  e.preventDefault();
+  let pageId = $(this).data("page");
+  console.log(pageId);
+  $.ajax({
+    url: "index.php",
+    type: "POST",
+    data: {
+      pageId: pageId,
+    },
+    success: function (response) {
+      // Handle the response
+      $("#result").html(response);
+    },
+    error: function (xhr, status, error) {
+      console.log("Error:", error);
+      console.log("xhr:", xhr);
+    },
+  });
+});
+
 $(document).on("keyup", "#search", function () {
   let value = $(this).val();
   _Query = value;

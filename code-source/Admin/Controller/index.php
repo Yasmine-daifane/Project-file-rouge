@@ -6,4 +6,8 @@ $RatesRequests = $GestionRates->getRequestsNumber();
 $CostumerNumber = $GestionRates->getCostumerNumber();
 $DepartmentNumber = $GestionRates->getDepartmentNumber();
 $ServicesNumber = $GestionRates->getServicesNumber();
+$getDepartment = $GestionRates->getDepartment();
+// echo "<pre>";
+// var_dump($getDepartment);
+// echo "</pre>";
 include_once(__ROOT__ . "/Views/index.php");

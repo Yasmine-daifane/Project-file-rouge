@@ -10,11 +10,10 @@ if (isset($_GET['id'])) {
 if (isset($_GET['Id_Service'])) {
     // Trouver tous les employés depuis la base de données 
     $GestionServices = new GestionServices();
-    $id = $_GET['Id_Service'];
-    $GestionServices->delete($id);
-   
+    $Id_Service = $_GET['Id_Service'];
+    $GestionServices->delete($Id_Service);
     header("Location: index.php?Id_department=" . $id);
-
 }
 ?>
     
+

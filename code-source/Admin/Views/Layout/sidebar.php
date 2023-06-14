@@ -1,3 +1,39 @@
+<style>
+    .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active {
+        color: #fff;
+        background-color: rgb(188, 84, 195);
+    }
+
+    /* .sidebar-dark-primary .nav-sidebar>.nav>.nav-item>.nav-link.active {
+        color: #fff;
+        background-color: rgb(188, 84, 195);
+    } */
+
+    .sidebar-dark-primary .nav-treeview>.nav-item>.nav-link.active {
+        color: #fff;
+        background-color: rgb(188, 84, 195);
+    }
+
+    .sidebar-dark-primary .nav-pills .nav-item .nav-link:not(.active):hover {
+        color: #fff;
+        background-color: rgb(33, 116, 202);
+    }
+
+    .sidebar-dark-primary .nav-treeview>.nav-item>.nav-link:not(.active):hover {
+        color: #fff;
+        background-color: rgb(33, 116, 202);
+    }
+
+    hr {
+        margin: 0;
+        border: white solid 1px;
+    }
+</style>
+<?php
+// echo "<pre>";
+// var_dump($_SERVER);
+// echo "</pre>";
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link">
@@ -33,32 +69,85 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/Project-file-rouge/code-source/Admin/Controller/Department/index.php" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Department/index.php") ? 'active' : ''; ?>">
+                    <a href="#" class="nav-link">
+                        <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                         <i class="nav-icon fas fa-list"></i>
-                        <p>Department</p>
+                        <p>
+                            Department
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
                     </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <?php
+                        foreach ($getDepartment as $Department) {
+                            // echo "<pre>";
+                            // var_dump($Department);
+                            // echo "</pre>";
+
+                        ?>
+                            <li class="nav-item">
+                                <a href="/Project-file-rouge/code-source/Admin/Controller/Service/index.php?Id_department=<?= $Department['Id_department'] ?>" class="nav-link <?= ($_SERVER['QUERY_STRING'] == "Id_department=" . $Department['Id_department']) ? 'active' : ''; ?>">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p><?= $Department['name'] ?></p>
+                                </a>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                        <!-- <li class="nav-item">
+                            <a href="./index2.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dashboard v2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index3.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dashboard v3</p>
+                            </a>
+                        </li> -->
+                        <hr>
+                        <li class="nav-item">
+                            <a href="/Project-file-rouge/code-source/Admin/Controller/Department/index.php" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Department/index.php") ? 'active' : ''; ?>">
+                                <!-- <i class="nav-icon fas fa-list"></i> -->
+                                <i class="far fa-circle nav-icon"></i>
+
+                                <p>All Department</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="/Projet-fil-rouge/code-source/Controllers/Admin/Users/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Projet-fil-rouge/code-source/Controllers/Admin/Users/index.php") ? 'active' : ''; ?>">
+                    <a href="/Project-file-rouge/code-source/Admin/Controller/Costomers/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Costomers/index.php") ? 'active' : ''; ?>">
                         <i class="nav-icon ion ion-person-add"></i>
-                        <p>Users</p>
+                        <p>Costomers</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/Projet-fil-rouge/code-source/Controllers/Admin/Inscription/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Projet-fil-rouge/code-source/Controllers/Admin/Inscription/index.php") ? 'active' : ''; ?>">
+                    <a href="/Project-file-rouge/code-source/Admin/Controller/Requests/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Requests/index.php") ? 'active' : ''; ?>">
                         <i class="nav-icon ion ion-stats-bars"></i>
-                        <p>Members</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Projet-fil-rouge/code-source/Controllers/Admin/States/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Projet-fil-rouge/code-source/Controllers/Admin/States/index.php") ? 'active' : ''; ?>">
-                        <i class="nav-icon ion ion-pie-graph"></i>
-                        <p>States</p>
+                        <p>Requests</p>
                     </a>
                 </li>
             </ul>
         </nav>
     </div>
-
     <!-- /.sidebar-menu -->
 </aside>
+<script>
+    let nav = document.querySelector('.nav-treeview');
+    console.log(nav);
+
+    var lis = nav.querySelectorAll('li a');
+    console.log(lis);
+
+    for (let i = 0; i < lis.length; i++) {
+        if (lis[i].classList.contains('active')) {
+            nav.classList.add('active')
+            nav.style.display = "block";
+            break; // Assuming you want to show the navigation and stop the loop after finding the first active element
+        }
+    }
+
+    // lis.forEach(element => console.log(element));
+</script>
