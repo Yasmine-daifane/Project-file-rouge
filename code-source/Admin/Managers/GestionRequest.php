@@ -17,6 +17,21 @@ class GestionRequests
         return $this->Connection;
     }
 
+    public function UpdateStatus($id, $statuse)
+    {
+        $sql = "UPDATE `requests` SET `status` = '$statuse' WHERE Id_request = $id";
+        // echo "<pre>";
+        // var_dump($sql);
+        // echo "</pre>";
+        // echo "<pre>";
+        // var_dump(mysqli_query($this->getConnection(), $sql));
+        // echo "</pre>";
+        mysqli_query($this->getConnection(), $sql);
+        // echo "<pre>";
+        // var_dump(mysqli_error($this->getConnection()));
+        // echo "</pre>";
+    }
+
     public function pages($items, $pagesNum, $itemsPerPage)
     {
         $pages = array();

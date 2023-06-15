@@ -1,6 +1,11 @@
-<h1>
+<h2>
     <?php var_dump($IsAjaxRequest) ?>
-</h1>
+</h2>
+<h2>
+    <?php 
+    // var_dump($IsUpdated)
+     ?>
+</h2>
 <?php
 if (empty($pages)) {
 ?>
@@ -111,9 +116,9 @@ if (empty($pages)) {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <select class="custom-select">
-                        <option selected>Choice one</option>
-                        <option value="Pending">Pending</option>
+                    <select id="status_select" class="custom-select">
+                        <!-- <option selected va>Choice one</option> -->
+                        <option value="Pending" selected>Pending</option>
                         <option value="Approved">Approved</option>
                         <option value="Rejected">Rejected</option>
                         <option value="Completed">Completed</option>
@@ -123,21 +128,14 @@ if (empty($pages)) {
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" id="update_status" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).on("click", "#status", function(e) {
-            e.preventDefault()
-            let id = $('#status').data
-            console.log(id);
-        })
-        let status = document.getElementById('status')
-        status.onclick = function(){
-            console.log("he");
-        }
+
     </script>

@@ -88,3 +88,39 @@ $(document).on("keyup", "#search_task", function () {
     },
   });
 });
+
+$(document).on("click", "#status", function (ev) {
+  event.preventDefault();
+  let btn = $("#update_status");
+  let id = $("#status").data("id");
+  console.log(id);
+  btn.data("id", id);
+});
+
+$(document).on("click", "#update_status", function () {
+  event.preventDefault();
+  var $element = $(".fade");
+  let btn = $("#update_status");
+  let id = btn.data("id");
+  let select_value = $("#status_select").val();
+  console.log(btn.data("id"));
+  console.log(select_value);
+  $.ajax({
+    url: "index.php",
+    type: "POST",
+    data: {
+      Id_Request: id,
+      Status: select_value,
+    },
+    success: function (response, xhr) {
+      $element.remove();
+      console.log("done");
+      console.log(xhr);
+      $("#result").html(response);
+    },
+    error: function (xhr, status, error) {
+      console.log("Error:", error);
+      console.log("xhr:", xhr);
+    },
+  });
+});
