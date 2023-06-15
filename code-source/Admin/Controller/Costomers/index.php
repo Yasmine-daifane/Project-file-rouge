@@ -35,9 +35,9 @@ $pages = $GestionRequests->pages($results, $pagesNum, $itemsPerPage);
 
 
 if ($IsAjaxRequest) {
-    include_once(__ROOT__ . "/Views/Requests/index.data.php");
+    include_once(__ROOT__ . "/Views/Costomers/index.data.php");
 } else {
-    include_once(__ROOT__ . "/Views/Requests/index.php");
+    include_once(__ROOT__ . "/Views/Costomers/index.php");
 }
 
 // include_once(__ROOT__ . "/Views/Requests/index.php");

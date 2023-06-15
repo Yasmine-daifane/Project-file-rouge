@@ -43,7 +43,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                 </div><!-- /.container-fluid -->
             </section>
             <div id="result" class="p-3">
-                <?php include_once(__ROOT__ . "/Views/Requests/index.data.php") ?>
+                <?php include_once(__ROOT__ . "/Views/Costomers/index.data.php") ?>
             </div>
         </div>
         <!-- /.content-wrapper -->

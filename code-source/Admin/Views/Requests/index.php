@@ -15,7 +15,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        // include_once(__ROOT__ . '/Views/Layout/preloader.php');
+        include_once(__ROOT__ . '/Views/Layout/preloader.php');
         ?>
         <!-- Navbar -->
         <?php
@@ -25,7 +25,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
 
         <!-- Main Sidebar Container -->
         <?php
-        // include_once(__ROOT__ . '/Views/Layout/sidebar.php');
+        include_once(__ROOT__ . '/Views/Layout/sidebar.php');
         ?>
         <!-- /.sidebar -->
 
