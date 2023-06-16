@@ -26,14 +26,11 @@
     }
 </style>
 <?php
-// echo "<pre>";
-// var_dump($_SERVER);
-// echo "</pre>";
+
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
-        <!-- <img src="/Project-file-rouge/code-source/Admin/Views/Assets/img/Group 3.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
         <span class="brand-text font-weight-light text-centre">InnovIT Manager</span>
     </a>
 
@@ -41,9 +38,7 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <!-- <div class="image">
-                <img src="../Views/Assets/vendor/AdminLTE-3.2.0/dist/img/avatar2.png" class="img-circle elevation-2" alt="User Image">
-            </div> -->
+          
             <div class="info">
                 <a href="#" class="d-block">Admin</a>
             </div>
@@ -67,7 +62,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Department
@@ -77,16 +71,13 @@
                     <ul class="nav nav-treeview" style="display: none;">
                         <?php
                         foreach ($getDepartment as $Department) {
-                            // echo "<pre>";
-                            // var_dump($Department);
-                            // echo "</pre>";
-
+                           
                         ?>
                             <li class="nav-item">
                                 <a href="/Project-file-rouge/code-source/Admin/Controller/Service/index.php?Id_department=<?= $Department['Id_department'] ?>" class="nav-link <?= ($_SERVER['QUERY_STRING'] == "Id_department=" . $Department['Id_department']) ? 'active' : ''; ?>">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p><?= $Department['name'] ?></p>
-                                </a>
+</a>
                             </li>
                         <?php
                         }
@@ -95,7 +86,6 @@
                         <hr>
                         <li class="nav-item">
                             <a href="/Project-file-rouge/code-source/Admin/Controller/Department/index.php" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Department/index.php") ? 'active' : ''; ?>">
-                                <!-- <i class="nav-icon fas fa-list"></i> -->
                                 <i class="far fa-circle nav-icon"></i>
 
                                 <p>All Department</p>
@@ -106,7 +96,7 @@
                 <li class="nav-item">
                     <a href="/Project-file-rouge/code-source/Admin/Controller/Costomers/" class="nav-link <?= ($_SERVER['PHP_SELF'] == "/Project-file-rouge/code-source/Admin/Controller/Costomers/index.php") ? 'active' : ''; ?>">
                         <i class="nav-icon ion ion-person-add"></i>
-                        <p>Costomers</p>
+                        <p>Costumers</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -131,9 +121,9 @@
         if (lis[i].classList.contains('active')) {
             nav.classList.add('active')
             nav.style.display = "block";
-            break; // Assuming you want to show the navigation and stop the loop after finding the first active element
+            break; 
         }
     }
 
-    // lis.forEach(element => console.log(element));
+ 
 </script>

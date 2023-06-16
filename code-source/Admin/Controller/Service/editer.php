@@ -1,6 +1,6 @@
 <?php
 define('__ROOT__', dirname(dirname(dirname(__FILE__))));
-include_once(__ROOT__ . './Managers/GestionService.php');
+include_once(__ROOT__ . '/Managers/GestionService.php');
 require_once(__ROOT__ . '/Managers/GestionRates.php');
 $GestionRates = new GestionRates;
 $getDepartment = $GestionRates->getDepartment();

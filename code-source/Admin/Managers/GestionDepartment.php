@@ -78,6 +78,6 @@ class GestionDepartments
         $Department->SetID($Department_data['Id_department']);
         $Department->SetName($Department_data['name']);
         $Department->SetDescription($Department_data['description']);
-        return     $Department;
+        return  $Department;
     }
 }

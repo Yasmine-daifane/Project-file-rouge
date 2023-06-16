@@ -61,11 +61,12 @@ if (empty($pages)) {
                     </td>
                     <td>
                         <p id="status" data-toggle="modal" data-target="#status_edit" data-id="<?= $result->GetID() ?>">
-                            <?= $result->Getstatuse() ?>
+                            <?= $result->Getstatuse() ?> 
+
                         </p>
                     </td>
                     <td class="client-actions">
-                        <a class="btn btn-primary btn-sm" href="mailto:<?= $result->GetEmail() ?>?subject=Mail from 'InnovIT'&body=Some body text here">
+                        <a class="btn btn-primary btn-sm" href="mailto:<?= $result->GetEmail() ?>?subject=Mail from 'InnovIT'&body=Thank you !!">
                             Send Email <i class="fa fa-envelope"></i>
                         </a>
                     </td>
@@ -110,14 +111,13 @@ if (empty($pages)) {
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit request status</h4>
+                    <h4 class="modal-title">Edit Request status</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <select id="status_select" class="custom-select">
-                        <!-- <option selected va>Choice one</option> -->
                         <option value="Pending" selected>Pending</option>
                         <option value="Approved">Approved</option>
                         <option value="Rejected">Rejected</option>

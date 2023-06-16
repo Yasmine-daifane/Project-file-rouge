@@ -5,9 +5,8 @@
 if (empty($pages)) {
 ?>
     <div class="alert alert-warning alert-dismissible">
-        <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> -->
         <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
-        No Service Found!
+        No Costumer!
     </div>
 <?php
 } else {
@@ -21,12 +20,8 @@ if (empty($pages)) {
                 <th class="text-center" style="width: 20%">
                     email
                 </th>
-                <th class="text-center" style="width: 20%">
-                    Description
-                </th>
-                <th style="width: 20%">
-                    Date
-                </th>
+               
+                
                 <th style="width: 20%">
                     Actions
                 </th>
@@ -45,14 +40,10 @@ if (empty($pages)) {
                     <td>
                         <?= $result->GetEmail() ?>
                     </td>
-                    <td>
-                        <?= $result->GetName() ?>
-                    </td>
-                    <td>
-                        <?= $result->GetDate_demande() ?>
-                    </td>
+                   
+                   
                     <td class="client-actions">
-                        <a class="btn btn-primary btn-sm" href="mailto:<?= $result->GetEmail() ?>?subject=Mail from 'InnovIT'&body=Some body text here">
+                        <a class="btn btn-primary btn-sm" href="mailto:<?= $result->GetEmail() ?>?subject=Mail from 'InnovIT'&body=Thank you for your registration !">
                             Send Email <i class="fa fa-envelope"></i>
                         </a>
                     </td>

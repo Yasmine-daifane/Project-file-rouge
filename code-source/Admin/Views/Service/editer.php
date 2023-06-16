@@ -49,7 +49,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                         <div class="col">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Add Service</h3>
+                                    <h3 class="card-title">Edite Service</h3>
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                             <i class="fas fa-minus"></i>
@@ -66,8 +66,8 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                                         <textarea name="description" id="inputDescription" class="form-control" rows="4"><?= $service->GetDescription() ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPrice"> Price</label>
-                                        <input type="number" name="price" id="inputPrice" class="form-control" value="<?= $service->GetPrice() ?>">
+                                        <label for="inputPrice"> Price by $</label>
+                                        <input type="number" name="price" id="inputPrice" class="form-control" value="<?= $service->GetPrice()?>">
 
                                     </div>
                                 </div>

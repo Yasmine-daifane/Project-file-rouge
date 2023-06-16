@@ -52,17 +52,13 @@ if (empty($pages)) {
                     <td>
                         <?= $result->GetDescription() ?>
                     </td>
-                    <td class="client-actions">
-                        <a class="btn btn-primary btn-sm" href="../../Controller/client/index.php?Id_client=<?= $result->GetID() ?>">
-                            <i class="fas fa-folder"></i>
-                            View
-                        </a>
+                        <td>
                         <a class="btn btn-info btn-sm" href="editer.php?Id_Service=<?= $result->GetID() ?>">
                             <i class="fas fa-pencil-alt"></i>
                             Edit
                         </a>
                         <a class="btn btn-danger btn-sm" href="delete.php?Id_Service=<?=$result->GetID() ?>&id=<?= $id ?>">
-                        <i class="fas fa-pencil-alt"></i>
+                        <i class="fas fa-trash"></i>
                             delete
                         </a>
                     

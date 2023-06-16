@@ -45,6 +45,7 @@ if (empty($departement)) {
                     <td>
                         <?= $result->GetDescription() ?>
                     </td>
+                    
                     <td class="client-actions">
                         <a class="btn btn-primary btn-sm" href="../../Controller/Service/index.php?Id_department=<?= $result->GetID() ?>">
                             <i class="fas fa-folder"></i>

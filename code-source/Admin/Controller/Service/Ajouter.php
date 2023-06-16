@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 }
 
 if (isset($_POST['create'])) {
-    echo "ilias is here";
+   
     $service = new Services();
     $service->SetName($_POST['name']);
     $service->SetDescription($_POST['description']);
