@@ -51,6 +51,7 @@
     #dd12a8 100%
   );
 }
+
 a.animated-button:link:after,
 a.animated-button:visited:after {
   content: "";
