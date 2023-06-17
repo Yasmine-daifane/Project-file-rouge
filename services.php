@@ -1,5 +1,5 @@
 <?php 
-include "/xampp/htdocs/Project-file-rouge/connect.php";
+include "/xampp2/htdocs/Project-file-rouge/connect.php";
 
 
 $json_file = file_get_contents('services.json');

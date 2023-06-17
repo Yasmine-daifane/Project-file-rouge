@@ -1,9 +1,9 @@
 <?php
 define('__ROOT__', dirname(dirname(dirname(__FILE__))));
-include_once(__ROOT__ . './Managers/GestionDepartment.php');
+include_once(__ROOT__ . '../Managers/GestionDepartment.php');
 
 $GestionDepartments = new GestionDepartments();
-require_once(__ROOT__ . '/Managers/GestionRates.php');
+require_once(__ROOT__ . '../Managers/GestionRates.php');
 $GestionRates = new GestionRates;
 $getDepartment = $GestionRates->getDepartment();
 

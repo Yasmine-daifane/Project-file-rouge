@@ -67,14 +67,14 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPrice"> Price by $</label>
-                                        <input type="number" name="price" id="inputPrice" class="form-control" value="<?= $service->GetPrice()?>">
+                                        <input type="text" name="price" id="inputPrice" class="form-control" value="<?= $service->GetPrice()?>">
 
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <a href="index.php" class="btn btn-secondary">Cancel</a>
-                                        <input type="submit" value="Update Client" name="Edit" class="btn btn-success float-right">
+                                        <input type="submit" value="Update Service" name="Edit" class="btn btn-success float-right">
                                     </div>
                                 </div>
                 </form>

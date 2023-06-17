@@ -74,7 +74,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                     <div class="row">
                         <div class="col-12">
                             <a href="index.php" class="btn btn-secondary">Cancel</a>
-                            <input type="submit" value="Create new Client" class="btn btn-success float-right">
+                            <input type="submit" value="Create new Department" class="btn btn-success float-right">
                         </div>
                     </div>
                 </form>
