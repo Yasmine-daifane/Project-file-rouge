@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 16 juin 2023 à 11:43
--- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 8.0.25
+-- Généré le : dim. 18 juin 2023 à 23:01
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,11 @@ CREATE TABLE `costumer` (
 --
 
 INSERT INTO `costumer` (`Id_costumer`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'ilias', 'anouar', 'ilias@gmail.com', 'ilias01');
+(1, 'hussein', 'bouik', 'hussbouik@gmail.com', 'huss'),
+(2, 'Hyacinth', 'Reyes', 'dyqojifusy@mailinator.com', '$2y$10$Otq0dlmYZOAKfDKsabB0WuP4eLuqsDI850.mnm23NJh5yhiD3lYXO'),
+(3, 'Dalton', 'Larsen', 'buvoqidos@mailinator.com', '$2y$10$q1x09U4AkuHBQ6blNH6uKub2zrIHZg1VBIopqcFWEcbZMN2wolw4y'),
+(4, 'Vivian', 'Spears', 'pivamun@mailinator.com', '$2y$10$g5KsEznQSQKWtHtiwsQd9udLTSRCZhVi7LIjtcIUG3voRVjXRE7am'),
+(5, 'Autumn', 'Matthews', 'ziru@mailinator.com', '$2y$10$lLJSiFkWJirhiK9RPHJnhuOBrFIaaXMc8YQJTfqcBxpybDPYsq3ga');
 
 -- --------------------------------------------------------
 
@@ -83,7 +87,7 @@ CREATE TABLE `requests` (
 --
 
 INSERT INTO `requests` (`Id_request`, `Id_costumer`, `Id_Service`, `demande`, `date_demande`, `status`) VALUES
-(1, 1, 83, 'hey i want a web application', '2023-06-14 14:02:22', 'Completed');
+(1, 1, 83, 'hey i want a web application', '2023-06-14 14:02:22', 'Rejected');
 
 -- --------------------------------------------------------
 
@@ -104,30 +108,27 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`Id_Service`, `name`, `description`, `price`, `Id_department`) VALUES
-(64, 'Network Setup and Configuration', 'Designing and implementing network infrastructure for businesses and organizations.', '$1000', 2),
-(65, 'Network Security', 'Assessing vulnerabilities and implementing security measures to protect networks from threats.', '$1200', 2),
-(66, 'Network Troubleshooting', 'Identifying and resolving network issues to ensure optimal performance and connectivity.', '$500', 2),
-(67, 'Wireless Networking', 'Setting up secure and reliable wireless networks for homes and businesses.', '$800', 2),
-(68, 'Network Monitoring', 'Implementing monitoring tools and systems to proactively manage and maintain network health.', '$600', 2),
-(69, 'VPN Solutions', 'Creating secure Virtual Private Networks for remote access and data encryption.', '$900', 2),
-(70, 'Network Upgrades and Expansion', 'Assessing and upgrading network infrastructure to support growing business needs.', '$1500', 2),
-(71, 'Network Documentation', 'Creating detailed documentation of network configurations, topologies, and protocols.', '$400', 2),
-(72, 'Logo Design', 'Creating unique and memorable logos that represent a brands identity.', '$500', 3),
-(73, 'Graphic Design', 'Designing visually appealing graphics for various digital and print media.', '$800', 3),
-(74, 'UI/UX Design', 'Crafting intuitive and user-friendly interfaces for web and mobile applications.', '$1000', 3),
-(75, 'Print Design', 'Designing brochures, flyers, business cards, and other print materials.', '$600', 3),
-(76, 'Brand Identity Design', 'Developing a consistent brand identity through logos, color schemes, and brand guidelines.', '$1200', 3),
-(77, 'Packaging Design', 'Creating attractive and informative packaging designs for products.', '$900', 3),
-(78, 'Illustration', 'Producing custom illustrations for books, magazines, websites, and more.', '$700', 3),
-(79, 'Motion Graphics', 'Designing visually dynamic animations and motion graphics for videos and presentations.', '$1500', 3),
-(81, 'Website Design', 'Professional and visually appealing website design for businesses and individuals.', '$500', 4),
-(82, 'Front-end Development', 'Creating interactive and responsive user interfaces using HTML, CSS, and JavaScript.', '$800', 4),
-(83, 'Back-end Development', 'Building server-side applications and APIs using frameworks like Node.js and Django.', '$900', 4),
-(84, 'E-commerce Solutions', 'Developing online stores with secure payment gateways and inventory management.', '$1200', 4),
-(85, 'CMS Development', 'Creating customized content management systems for efficient website management.', '$700', 4),
-(86, 'Website Maintenance', 'Providing regular updates, security checks, and bug fixes for existing websites.', '$300/month', 4),
-(87, 'Responsive Design', 'Optimizing websites to adapt and perform well on various devices and screen sizes.', '$400', 4),
-(88, 'Web Hosting', 'Offering reliable web hosting services with high uptime and scalable infrastructure.', '$100/month', 4);
+(64, 'Network Setup and Configuration', 'Designing and implementing network infrastructure for businesses and organizations.', '1000', 2),
+(65, 'Network Security', 'Assessing vulnerabilities and implementing security measures to protect networks from threats.', '1200', 2),
+(66, 'Network Troubleshooting', 'Identifying and resolving network issues to ensure optimal performance and connectivity.', '500', 2),
+(67, 'Wireless Networking', 'Setting up secure and reliable wireless networks for homes and businesses.', '800', 2),
+(68, 'Network Monitoring', 'Implementing monitoring tools and systems to proactively manage and maintain network health.', '600', 2),
+(72, 'Logo Design', 'Creating unique and memorable logos that represent a brands identity.', '500', 3),
+(73, 'Graphic Design', 'Designing visually appealing graphics for various digital and print media.', '800', 3),
+(74, 'UI/UX Design', 'Crafting intuitive and user-friendly interfaces for web and mobile applications.', '1000', 3),
+(75, 'Print Design', 'Designing brochures, flyers, business cards, and other print materials.', '600', 3),
+(76, 'Brand Identity Design', 'Developing a consistent brand identity through logos, color schemes, and brand guidelines.', '1200', 3),
+(77, 'Packaging Design', 'Creating attractive and informative packaging designs for products.', '900', 3),
+(78, 'Illustration', 'Producing custom illustrations for books, magazines, websites, and more.', '700', 3),
+(79, 'Motion Graphics', 'Designing visually dynamic animations and motion graphics for videos and presentations.', '223', 3),
+(81, 'Website Design', 'Professional and visually appealing website design for businesses and individuals.', '500', 4),
+(82, 'Front-end Development', 'Creating interactive and responsive user interfaces using HTML, CSS, and JavaScript.', '800', 4),
+(83, 'Back-end Development', 'Building server-side applications and APIs using frameworks like Node.js and Django.', '900', 4),
+(84, 'E-commerce Solutions', 'Developing online stores with secure payment gateways and inventory management.', '1200', 4),
+(85, 'CMS Development', 'Creating customized content management systems for efficient website management.', '700', 4),
+(86, 'Website Maintenance', 'Providing regular updates, security checks, and bug fixes for existing websites.', '2332', 4),
+(87, 'Responsive Design', 'Optimizing websites to adapt and perform well on various devices and screen sizes.', '400', 4),
+(88, 'Web Hosting', 'Offering reliable web hosting services with high uptime and scalable infrastructure.', '100', 4);
 
 --
 -- Index pour les tables déchargées
@@ -168,13 +169,13 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT pour la table `costumer`
 --
 ALTER TABLE `costumer`
-  MODIFY `Id_costumer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id_costumer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `department`
 --
 ALTER TABLE `department`
-  MODIFY `Id_department` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id_department` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `requests`
