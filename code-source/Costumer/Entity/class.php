@@ -48,7 +48,7 @@ class User
       if ($test) {
         session_start();
         $_SESSION['Id_costumer'] = $user['Id_costumer'];
-        header("Location: apphome.php");
+        header("Location:apphom.php");
       }
     }
   }
