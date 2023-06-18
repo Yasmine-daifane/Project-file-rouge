@@ -66,7 +66,6 @@ if (isset($_POST['sign_in'])) {
           <input class="form-group_input" type="text" name="first_name" placeholder="First Name" required="">
           <input class="form-group_input" type="text" name="last_name" placeholder="last Name" required="">
           <input class="form-group_input" type="email" name="email" placeholder="Email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-          <!-- * Pa$$w0rd!  T1s1s@s3cur3 -->
           <input class="form-group_input" type="password" name="passwrd" placeholder="Password" required="">
           <button class="button button--form" type="submit" name="sign_up">Sign up</button>
         </div>
@@ -75,7 +74,7 @@ if (isset($_POST['sign_in'])) {
 
     <fieldset class="fieldset">
       <h2>Don't have an account ?</h2>
-      <p>Are you looking for a way to improve your education and training? If so, then you need to check out our center of formation!.So what are you waiting for?
+      <p>Are you looking for a way to improve your work .So what are you waiting for?
         Sign up today and start your journey to success!</p>
       <div class="form_content form_content--noaccount">
 
