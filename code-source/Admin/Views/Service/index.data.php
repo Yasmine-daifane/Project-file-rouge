@@ -53,7 +53,7 @@ if (empty($pages)) {
                         <?= $result->GetDescription() ?>
                     </td>
                         <td>
-                        <a class="btn btn-info btn-sm" href="editer.php?Id_Service=<?= $result->GetID() ?>">
+                        <a class="btn btn-info btn-sm" href="editer.php?Id_Service=<?= $result->GetID() ?>&id=<?= $id ?>">
                             <i class="fas fa-pencil-alt"></i>
                             Edit
                         </a>

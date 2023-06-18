@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include_once("/xampp2/htdocs/Project-file-rouge/code-source/Admin/Views/Layout/root.php");
+include_once("/xampp/htdocs/Project-file-rouge/code-source/Admin/Views/Layout/root.php");
 include_once(__ROOT__ . "/Views/Layout/head.php")
 ?>
 <style>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include_once("/xampp2/htdocs/Project-file-rouge/code-source/Admin/Views/Layout/root.php");
+include_once("/xampp/htdocs/Project-file-rouge/code-source/Admin/Views/Layout/root.php");
 include_once(__ROOT__ . "/Views/Layout/head.php")
 ?>
 <style>
@@ -46,7 +46,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
             <section class="content">
                 <!-- Default box -->
                 <div class="row justify-content-center align-items-center" style="gap: 20px;margin: auto;">
-                    <div class="col-lg-2 col-6 like-dislike-container">
+                    <div class="col col-3 like-dislike-container  like-dislike-container">
                         <a href="./Department/">
                             <div class="tool-box">
                                 <hr class="elment">
@@ -55,7 +55,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                             <p class="text-content">Department</p>
                         </a>
                     </div>
-                    <div class="col-lg-2  col-6 like-dislike-container">
+                    <div class="col col-3 like-dislike-container ">
                         <a href="#">
                             <div class="tool-box">
                                 <hr class="elment">
@@ -64,7 +64,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                             <p class="text-content">Services</p>
                         </a>
                     </div>
-                    <div class="col-lg-2  col-6 like-dislike-container">
+                    <div class="col col-3  like-dislike-container">
                         <a href="#">
                             <div class="tool-box">
                                 <hr class="elment">
@@ -73,7 +73,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php")
                             <p class="text-content">Requests</p>
                         </a>
                     </div>
-                    <div class="col-lg-2  col-6 like-dislike-container">
+                    <div class="col col-3  like-dislike-container">
                         <a href="#">
                             <div class="tool-box">
                                 <hr class="elment">

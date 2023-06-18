@@ -8,7 +8,7 @@ $getDepartment = $GestionRates->getDepartment();
 
 $gestionservice = new GestionServices();
 $IsAjaxRequest = false;
-// $Query = "";
+ $Query = "";
 
 if (isset($_GET['Id_department'])) {
     $id = $_GET['Id_department'];

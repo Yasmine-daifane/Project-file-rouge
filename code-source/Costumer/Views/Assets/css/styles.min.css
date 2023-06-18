@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Abril Fatface";
-  src: url(/assets/fonts/zOL64pLDlL1D99S8g8PtiKchq-lmjdLh.woff2?h=2ba0f9c3f9e0bb48d67fe3095957140b)
+  src: url(/Assets/fonts/zOL64pLDlL1D99S8g8PtiKchq-lmjdLh.woff2?h=2ba0f9c3f9e0bb48d67fe3095957140b)
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: "Abril Fatface";
-  src: url(/assets/fonts/zOL64pLDlL1D99S8g8PtiKchq-dmjQ.woff2?h=2ba0f9c3f9e0bb48d67fe3095957140b)
+  src: url(/Assets/fonts/zOL64pLDlL1D99S8g8PtiKchq-dmjQ.woff2?h=2ba0f9c3f9e0bb48d67fe3095957140b)
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -21,7 +21,7 @@
 }
 @font-face {
   font-family: "Noto Sans Inscriptional Pahlavi";
-  src: url(/assets/fonts/ll8UK3GaVDuxR-TEqFPIbsR79Xxz9WEKbwsjpz7VklYlC7FCZoGfOQ.woff2?h=00b21f4b293d468b7117bf2fed476fb8)
+  src: url(/Assets/fonts/ll8UK3GaVDuxR-TEqFPIbsR79Xxz9WEKbwsjpz7VklYlC7FCZoGfOQ.woff2?h=00b21f4b293d468b7117bf2fed476fb8)
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -36,21 +36,13 @@
 }
 .btn-primary:hover {
   color: #ededed;
-  background-color: #001a40;
+  background-color: #414243;
   border-color: #001a40;
 }
 .card1:hover {
   background-color: var(--bs-purple);
 }
-#bg {
-  background: linear-gradient(
-    109.71deg,
-    #0094db 0,
-    #22119d 15.62%,
-    #5c05a1 43.77%,
-    #dd12a8 100%
-  );
-}
+
 
 a.animated-button:link:after,
 a.animated-button:visited:after {
@@ -192,11 +184,5 @@ li:hover {
 
 
 
-/* index php */
 
 
-
-body{
-
-  background: #5c05a1;
-}

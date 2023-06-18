@@ -9,13 +9,15 @@ $GestionServices = new GestionServices();
 if (isset($_GET['Id_Service'])) {
     $service = $GestionServices->RechercherParId($_GET['Id_Service']);
 }
-
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
 if (isset($_POST['Edit'])) {
-    $id = $_POST['Id_Service'];
+    $id = $_GET['Id_Service'];
     $nom = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
     $GestionServices->Edit($id, $nom, $description, $price);
-    header('Location: index.php');
+    header("Location: index.php?Id_department=" . $id);
 }
 include_once(__ROOT__ . '/Views/Service/editer.php');
