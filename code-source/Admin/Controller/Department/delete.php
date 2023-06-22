@@ -6,7 +6,7 @@ if (isset($_GET['Id_department'])) {
     // Trouver tous les employés depuis la base de données 
     $GestionDepartments = new GestionDepartments();
     $id = $_GET['Id_department'];
-    // echo $id;
     $GestionDepartments->Delete($id);
     header('Location: index.php');
 }
+

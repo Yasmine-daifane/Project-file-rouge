@@ -1,6 +1,4 @@
-<h1>
-    <?php var_dump($IsAjaxRequest) ?>
-</h1>
+
 <?php
 if (empty($pages)) {
 ?>
